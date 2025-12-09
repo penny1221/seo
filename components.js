@@ -36,6 +36,61 @@ function setupHamburgerMenu() {
     }
 }
 
+function renderLatestArticles() {
+    // 檢查 allArticles 是否存在，以及是否在首頁
+    if (typeof allArticles === 'undefined') {
+        // 如果還沒載入數據，就退出
+        return; 
+    }
+    const container = document.getElementById('latest-articles-container');
+    if (!container) {
+        // 如果不在首頁，就退出
+        return; 
+    }
+    
+    // 排序文章（如果數據未排序，通常按日期排序）
+    // 這裡我們假設 allArticles 已經按日期降序排列
+    const latestArticles = allArticles.slice(0, 3); // 抓取最新的 3 篇文章
+
+    // 由於我們不知道您的 createArticleCardHTML 函數在哪，我們在這裡重新定義一個簡單版本
+    function createIndexCardHTML(article) {
+    // 檢查是否有圖片，如果沒有則使用預設圖片或空白
+    const imagePath = article.imageSrc || 'images/default-placeholder.jpg'; 
+    const altText = article.title + ' 封面圖'; // 圖片的 alt 屬性
+
+    return `
+        <a href="${article.link}" class="article-card-link" style="text-decoration: none; color: inherit;">
+            <div class="article-card" style="border: 1px solid var(--color-divider); border-radius: 8px; overflow: hidden; transition: transform 0.3s;">
+                
+                <div class="card-image" style="height: 200px; background-color: #EEE;">
+                    <img 
+                        src="${imagePath}" 
+                        alt="${altText}" 
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"
+                    >
+                </div>
+                <div class="card-body" style="padding: 20px;">
+                    <span class="tag-primary" style="display: inline-block; background-color: var(--color-primary); color: white; padding: 4px 10px; border-radius: 3px; font-size: 12px; margin-bottom: 10px;">${article.category}</span>
+                    <h3 style="font-size: 20px; margin-bottom: 10px;">${article.title}</h3>
+                    <p class="meta" style="font-size: 14px; color: #777; margin-bottom: 15px;">發布日期：${article.date}</p>
+                    <span class="read-more" style="color: var(--color-accent); font-weight: bold;">深入閱讀 →</span>
+                </div>
+            </div>
+        </a>
+    `;
+}
+    // 渲染 HTML
+    container.innerHTML = latestArticles.map(createIndexCardHTML).join('');
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // ... 您的 loadComponent 函數和載入 Header/Footer 的程式碼 ...
+
+    // ⚠️ 在載入完畢後，執行最新文章渲染 ⚠️
+    renderLatestArticles(); 
+
+});
 
 document.addEventListener('DOMContentLoaded', () => {
 
