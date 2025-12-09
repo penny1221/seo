@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Core Web Vitals 對 Google 排名和用戶體驗的影響實戰分析 | SEO-幽幽的解憂方程式</title>
+    <meta name="description" content="深入分析 Core Web Vitals (LCP, FID, CLS) 如何影響您的 Google 排名和用戶體驗，提供實戰優化清單。">
+    <link rel="canonical" href="http://localhost/article/core-web-vitals-simple.html">
+
+    <div id="head-styles-placeholder"></div>
+
+    <style>
+       
+        /* 確保文章頁面內容在整體網站背景上有間隙 */
+        .single-article-page {
+            padding: 60px 0;
+            /* 整體 section 的上下間距 */
+            background-color: var(--color-background);
+            /* 網站區塊背景色 (淺灰) */
+        }
+
+        /* [現有文章內文排版優化 CSS] */
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        .article-content h2,
+        .article-content h3 {
+            color: var(--color-secondary);
+            margin-top: 35px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+        }
+
+        .article-content h2 {
+            font-size: 28px;
+            border-bottom: 1px solid var(--color-divider);
+        }
+
+        .article-content h3 {
+            font-size: 22px;
+            color: var(--color-primary);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+
+    <article class="single-article-page" style="padding: 40px 0;">
+        <div class="container" style="max-width: 750px; margin: 0 auto;">
+
+            <header class="article-header" style="margin-bottom: 30px;">
+                <span class="tag-primary"
+                    style="background-color: var(--color-primary); color: white; padding: 4px 10px; border-radius: 3px; font-size: 13px; display: inline-block; margin-bottom: 10px;">技術
+                    SEO</span>
+
+                <h1 style="font-size: 38px; color: var(--color-secondary); margin: 0;">Core Web Vitals 對 Google
+                    排名和用戶體驗的影響實戰分析</h1>
+
+            </header>
+
+            <div class="article-content">
+
+                <p style="font-size: 17px; line-height: 1.8;">
+                    Core Web Vitals (CWV) 不再只是可有可無的加分項，它們是 Google 排名演算法中一個實質的訊號。這篇文章將帶您深入了解 LCP、FID 和 CLS 的優化重點。
+                </p>
+
+                <h2>什麼是 Core Web Vitals？為何其重要性提升？</h2>
+                <p>
+                    Core Web Vitals 衡量的是用戶在實際操作網頁時的體驗。它們包括三個核心指標，且都需要在您網站的真實數據中達標，才能對排名產生正向影響。
+                </p>
+
+                <h3>最大內容繪製 (LCP)：衡量加載速度</h3>
+                <p>
+                    LCP 衡量頁面加載時最大的內容元素（通常是圖片或大標題）出現在螢幕上的時間。理想的 LCP 時間應在 **2.5 秒以內**。常見的優化方式是壓縮圖片、使用內容分發網路 (CDN)。
+                </p>
+
+                <h3>首次輸入延遲 (FID)：衡量互動性</h3>
+                <p>
+                    FID 衡量用戶首次與頁面互動（例如點擊按鈕）到瀏覽器響應的時間。理想的 FID 應在 **100 毫秒以內**。這個指標主要受網站主線程上的 JavaScript 執行時間影響。
+                </p>
+
+                <h3>實戰優化：我們如何做到？</h3>
+                <p>
+                    我們建議使用 **Google PageSpeed Insights** 和 **Google Search Console (CWV 報告)**
+                    來診斷您的網站。優化是一場持續的戰役，專注於以下幾個關鍵點：
+                </p>
+                <ul style="padding-left: 20px; list-style-type: disc;">
+                    <li>**圖片優化：** 轉換為 WebP 格式並使用延遲加載 (Lazy Loading)。</li>
+                    <li>**伺服器響應時間：** 升級主機或優化伺服器配置。</li>
+                    <li>**CSS/JS 最小化：** 刪除不必要的代碼。</li>
+                </ul>
+
+            </div>
+
+            <footer class="article-footer"
+                style="border-top: 1px solid var(--color-divider); padding-top: 20px; margin-top: 50px;">
+                <p class="article-info" style="font-size: 15px; color: #777;">
+                    **作者簡介：** 幽幽 (數據驅動的 SEO 策略師，<a href="about.html"
+                        style="color: var(--color-accent); text-decoration: none;">了解更多</a>)
+                    <br>
+                    **發布時間：** 2025 年 12 月 01 日
+                </p>
+            </footer>
+
+        </div>
+    </article>
+    <div id="footer-placeholder"></div>
+
+    <script src="components.js"></script>
+</body>
+
+</html>

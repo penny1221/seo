@@ -1,0 +1,292 @@
+/* 1. 核心 CSS 變數與通用設定 */
+:root {
+    --color-primary: #3498DB;
+    /* 淺藍色 */
+    --color-secondary: #1D70B8;
+    /* 深沉藍 */
+    --color-accent: #FF7F50;
+    /* 活力橙 (CTA) */
+    --color-text: #333333;
+    /* 主要內文 */
+    --color-background: #F8F8F8;
+    /* 區塊背景 */
+    --color-white: #FFFFFF;
+    --color-divider: #E0E0E0;
+    /* 淺灰分隔線 */
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-white);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* 2. 導航列 (Header) */
+.main-header {
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-divider);
+    padding: 15px 0;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+.nav-links a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+/* CTA 按鈕樣式 */
+.btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    text-align: center;
+    border: none;
+}
+
+.btn-accent {
+    background-color: var(--color-accent);
+    /* 活力橙 */
+    color: var(--color-white);
+    border: 2px solid var(--color-accent);
+}
+
+.btn-accent:hover {
+    background-color: #e6603a;
+    /* 略深 */
+}
+
+.btn-secondary {
+    background-color: var(--color-primary);
+    /* 淺藍色 */
+    color: var(--color-white);
+    border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-secondary);
+}
+
+/* 3. 頂部形象區 (Hero Section) */
+.hero-section {
+    background-color: var(--color-background);
+    /* 淺灰背景 */
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--color-secondary);
+    /* 深藍色標題 */
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.cta-group .btn {
+    margin: 0 10px;
+}
+
+/* 4. 文章/案例列表區 (Article Grid) */
+.content-section {
+    padding: 60px 0;
+    background-color: var(--color-white);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: var(--color-secondary);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primary);
+    /* 淺藍線條點綴 */
+    margin: 10px auto 0;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* 4.1 文章卡片 (Article Card) */
+.article-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-divider);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.article-card:hover {
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.2);
+    /* 淺藍色陰影效果 */
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    background-color: var(--color-background);
+    /* 圖片佔位符 */
+    display: block;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.tag-primary {
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.card-body h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 10px 0;
+    min-height: 50px;
+}
+
+.card-body .meta {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* 5. 頁尾 (Footer) */
+.main-footer {
+    background-color: var(--color-text);
+    color: var(--color-divider);
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.main-footer a {
+    color: var(--color-primary);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* ---------------------------------------------------- */
+/* 響應式設計：導覽列折疊 (Responsive Navigation) */
+/* ---------------------------------------------------- */
+
+/* 預設樣式 (針對寬螢幕)：導覽列正常顯示，漢堡按鈕隱藏 */
+.main-header .nav-links {
+    display: flex;
+    /* 讓連結保持水平 */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 媒體查詢：當螢幕寬度小於 768px 時執行 */
+@media (max-width: 768px) {
+
+    /* 1. 顯示漢堡圖標 */
+    .main-header .hamburger-menu {
+        display: block !important;
+        /* 強制顯示漢堡按鈕 */
+    }
+
+    /* 2. 隱藏常規導覽列並準備折疊 */
+    .main-header .nav-links {
+        display: flex;
+        /* 保持 flex 佈局 */
+        flex-direction: column;
+        /* 將選單項目垂直排列 */
+
+        /* 選單折疊的視覺效果 */
+        position: absolute;
+        top: 60px;
+        /* 位於 Header 底部下方 */
+        left: 0;
+        width: 100%;
+        background-color: var(--color-white);
+        /* 折疊選單的底色 */
+        border-top: 1px solid var(--color-divider);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+        /* 初始狀態：折疊 (移動到視窗外) */
+        transform: translateY(-150%);
+        visibility: hidden;
+
+        padding: 15px 0;
+    }
+
+    /* 3. 展開選單的狀態 (由 JavaScript 添加) */
+    .main-header .nav-links.active {
+        transform: translateY(0);
+        /* 移回視窗內 */
+        visibility: visible;
+    }
+
+    /* 4. 調整折疊選單中連結的間距和對齊 */
+    .main-header .nav-links a {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+        padding: 8px 0;
+    }
+}

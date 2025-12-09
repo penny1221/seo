@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>文章/部落格 | SEO-幽幽的解憂方程式的數據驅動策略分享</title>
+    <meta name="description" content="瀏覽 SEO-幽幽的解憂方程式的所有深度文章。涵蓋技術 SEO、內容策略、關鍵字研究和成功案例分析，助您的網站流量穩定成長。">
+    <link rel="canonical" href="http://localhost/blog.html">
+
+    <div id="head-styles-placeholder"></div>
+    <style>
+        .btn-filter {
+            /* 通用按鈕樣式 */
+            padding: 8px 20px;
+            border: 1px solid var(--color-divider);
+            background-color: var(--color-white);
+            color: var(--color-text);
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-filter:hover {
+            background-color: #F0F0F0;
+        }
+
+        /* 選中狀態的按鈕樣式 */
+        .btn-filter.active {
+            border-color: var(--color-primary);
+            background-color: var(--color-primary);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+
+    <section class="blog-hero"
+        style="background-color: var(--color-secondary); color: white; padding: 80px 0; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 40px; margin-bottom: 10px;">SEO 策略與實戰文章</h1>
+            <p style="font-size: 18px;">深入淺出的 SEO 知識，助您將流量轉化為實質業績。</p>
+        </div>
+    </section>
+
+    <section class="blog-content-list" style="padding: 60px 0;">
+        <div class="container">
+
+            <div class="category-filters" id="category-filters" style="margin-bottom: 40px; text-align: center;">
+                <h2 style="font-size: 24px; color: var(--color-primary); margin-bottom: 20px;">文章主題分類</h2>
+
+                <a href="#" class="btn btn-filter active" data-category="全部" style="margin: 0 5px;">全部文章</a>
+                <a href="#" class="btn btn-filter" data-category="技術 SEO" style="margin: 0 5px;">技術 SEO</a>
+                <a href="#" class="btn btn-filter" data-category="內容策略" style="margin: 0 5px;">內容策略</a>
+                <a href="#" class="btn btn-filter" data-category="案例分析" style="margin: 0 5px;">案例分析</a>
+
+            </div>
+
+            <div class="article-grid" id="articles-list-container"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            </div>
+
+            <div class="pagination" id="pagination-controls" style="text-align: center; margin-top: 40px;">
+            </div>
+
+            <div class="pagination" style="text-align: center; margin-top: 40px;">
+               
+            </div>
+
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="pagination.js"></script>
+    <script src="articles-data.js"></script>
+    <script src="components.js"></script>
+</body>
+
+</html>
